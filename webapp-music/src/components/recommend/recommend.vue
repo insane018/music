@@ -27,7 +27,7 @@
         getRecommend().then((res) => {
           if (res.code === ERR_OK) {
             this.recommends = res.data.slider
-            console.log(1, res)
+            console.log(res)
           }
         })
       }
