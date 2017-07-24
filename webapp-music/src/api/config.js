@@ -1,12 +1,9 @@
-/**
- * Created by 22 on 2017/7/22.
- */
 export const commonParams = {
-  g_tk: 5381,
-  format: 'json',
+  g_tk: 1928093487,
   inCharset: 'utf-8',
   outCharset: 'utf-8',
-  notice: 0
+  notice: 0,
+  format: 'jsonp'
 }
 
 export const options = {

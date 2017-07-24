@@ -11,18 +11,24 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import axios from 'axios'
+  import {getRecommend} from 'api/recommend'
+  import {ERR_OK} from 'api/config'
   export default{
+    data() {
+      return {
+        recommends: []
+      }
+    },
     created() {
       this._getRecommend()
     },
     methods: {
       _getRecommend() {
-        axios({
-          method: 'get',
-          url: '/api?g_tk=5381&uin=0&format=json&inCharset=utf-8&outCharset=utf-8&notice=0&platform=h5&needNewCode=1&_=1500708844512',
-        }).then((res) => {
-          console.log(res)
+        getRecommend().then((res) => {
+          if (res.code === ERR_OK) {
+            this.recommends = res.data.slider
+            console.log(1, res)
+          }
         })
       }
 
