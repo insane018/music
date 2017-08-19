@@ -21,10 +21,10 @@
         default: null
       }
     },
-    mouted() {
+    mounted() {
       setTimeout(() => {
         this._initScroll()
-      }, 20)
+      }, 50)
     },
     methods: {
       _initScroll() {
@@ -50,7 +50,7 @@
       data() {
         setTimeout(() => {
           this.refresh()
-        }, 20)
+        }, 50)
       }
     }
   }
